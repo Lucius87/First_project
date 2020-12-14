@@ -61,3 +61,27 @@
     color: #fff;
     font-size: 30px;
 }
+.sticky_wrapper .section_bar{
+
+ }
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    margin: 0 35px;
+}
+.navbar .title{
+    display: flex;
+    float: left;
+}
+.nav_buttons{
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+.nav_buttons .sub_title{
+    margin: 0px 20px;
+    text-transform: uppercase;
+}

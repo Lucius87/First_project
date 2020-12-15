@@ -11,6 +11,9 @@
     height: 100%;
     display: flex;
 }
+.margin_top_0{
+    margin-top: 0!important;
+}
 .center_content{
      width: 100%;
      height: 100%;
@@ -22,7 +25,7 @@
      height: 100vh;
  }
  .section_1{
-     background-image: url("./images/pattern.png"), url("./images/cover.jpg");
+     background-image: url("images/pattern.png"), url("images/cover.jpg");
      background-repeat: repeat, no-repeat;
      background-size: 2px, cover;
      position: relative;
@@ -68,20 +71,111 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0 15px;
     margin: 0 35px;
+    max-width: 1440px;
+
+
 }
 .navbar .title{
     display: flex;
-    float: left;
 }
 .nav_buttons{
     display: flex;
     flex-direction: row;
-    float: right;
 }
 .nav_buttons .sub_title{
-    margin: 0px 20px;
+    margin: 0 20px;
     text-transform: uppercase;
+}
+.section_3{
+    background-color: #fff;
+    padding: 120px 0 100px;
+}
+.content{
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.section_3 .title{
+    font-weight: 700;
+    font-size: 30px;
+    color: #000;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+.section_3 .separator{
+    height: 1px;
+    border-bottom: 1px solid #c4c4c4;
+    width: 100px;
+    margin: 30px auto;
+}
+.section_3 .desc{
+    font-size: 14px;
+    color: #777;
+    width: 100%;
+    max-width: 555px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+.section_3 .gallery{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+.section_3 .gallery .item{
+    width: 360px;
+    height: 225px;
+    margin-top: 40px;
+    position: relative;
+}
+.section_3 .gallery .item img{
+    width: 360px;
+    height: 225px;
+}
+.section_3 .gallery .item .hover_area{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(158,84,6,.4);
+    padding: 30px;
+    opacity: 0;
+    transition: 0.5s ease;
+
+}
+.section_3 .gallery .item .hover_area .desc_area{
+    border: 1px solid #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: 2s ease;
+}
+.section_3 .gallery .item .hover_area .desc_area .text{
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.section_3 .gallery .item:hover .hover_area{
+    opacity: 1;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.section_3 .gallery .item:hover .hover_area .desc_area{
+    opacity: 1;
+    transition: 0.5s ease;
+
 }

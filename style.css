@@ -3,7 +3,7 @@
     flex-direction: column;
     margin: 0;
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     font-family: Tahoma, serif;
 }
 .content_wrapper{
@@ -41,7 +41,7 @@
      font-size: 40px;
      font-weight: bold;
      line-height: 1.2;
-     margin: 10px 0;
+     margin: 0 10px;
      text-transform: uppercase;
      padding: 0 20px;
      text-align: center;
@@ -64,21 +64,20 @@
     color: #fff;
     font-size: 30px;
 }
-.sticky_wrapper .section_bar{
-
+.section_bar{
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 99;
  }
 .navbar{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 15px;
-    margin: 0 35px;
-    max-width: 1440px;
-
-
+    height: 51px;
 }
-.navbar .title{
+.section_bar .title{
     display: flex;
 }
 .nav_buttons{
@@ -89,6 +88,81 @@
     margin: 0 20px;
     text-transform: uppercase;
 }
+@media screen and (max-width: 1500px) {
+.section_bar{
+    background-color: red;
+}
+    .section_bar .nav_buttons{
+        display: none;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .section_bar {
+        background-color: blue;
+    }
+}
+@media screen and (max-width: 900px) {
+    .section_bar {
+        background-color: yellow;
+    }
+}
+@media screen and (max-width: 800px) {
+    .section_bar {
+        background-color: green;
+    }
+}
+.section_2{
+    padding: 120px 0 100px;
+    background-color: #f5f5f5;
+}
+.section_2 .title{
+    font-weight: 800;
+    font-size: 30px;
+    color: #000;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+.section_2 .separator{
+    height: 1px;
+    border-bottom: 1px solid #c4c4c4;
+    width: 100px;
+    margin: 30px auto;
+}
+.section_2 .desc{
+    font-size: 16px;
+    color: #777;
+    width: 100%;
+    max-width: 555px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+}
+.section_2 .box{
+    width: 25%;
+    margin: 0 15px;
+    padding: 40px 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.section_2 .box .iconbox_title{
+    font-size: 13px;
+}
+.section_2 .box .iconbox_desc{
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+}
 .section_3{
     background-color: #fff;
     padding: 120px 0 100px;
@@ -97,6 +171,7 @@
     width: 100%;
     max-width: 1170px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 .section_3 .title{
     font-weight: 700;
@@ -179,3 +254,82 @@
     transition: 0.5s ease;
 
 }
+.section_4{
+    background-color: #fff;
+    padding: 120px 0 100px;
+}
+.section_4 .title{
+    font-weight: 700;
+    font-size: 30px;
+    color: #000;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+.section_4 .separator{
+    height: 1px;
+    border-bottom: 1px solid #c4c4c4;
+    width: 100px;
+    margin: 30px auto;
+}
+.section_4 .desc {
+    font-size: 14px;
+    color: #777;
+    width: 100%;
+    max-width: 555px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+.section_4 .box{
+    width: 25%;
+    margin: 0 15px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section_4 .box .title{
+    font-size: 13px;
+}
+.diagram {
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+.diagram-data {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 22px;
+}
+.circle {
+    fill: transparent;
+    stroke: #dfdcd5;
+    stroke-width: 5;
+    /*       stroke-dasharray: 101 100; */
+}
+.circle-diagrams {
+    fill: transparent;
+    stroke: red;
+    stroke-width: 5;
+}
+svg {
+    width: 150px; height: 150px;
+    transform: rotate(-70deg);
+    background: transparent;
+    border-radius: 50%;
+}
+.scroll_top{
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: purple;
+}
+

@@ -506,14 +506,24 @@ svg {
 }
 .social_links{
     list-style: none;
+    margin: auto;
+    padding: 0;
 }
-ul {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding-inline-start: 40px;
+.item{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #777777;
+    border-radius: 3px;
+    color: #777777;
+    margin: 5px;
+}
+.icon{
+    color: #777777;
+    
+
 }
 #footer span{
     color: #ff5252;

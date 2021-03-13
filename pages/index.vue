@@ -1,13 +1,13 @@
 <template>
 	<div>
-		<section1 />
-		<section2 />
-		<section3 />
-		<section4 />
-		<section5 />
+		<section1 id="home" />
+		<section2 :menu="menu"/>
+		<section3 id="services" />
+		<section4 id="works" />
+		<section5 id="skills" />
 		<section6 />
-		<section7 />
-		<section8 />
+		<section7 id="testimonials" />
+		<section8 id="contacts" />
 		<section9 />
 		<section10 />
 	</div>
@@ -27,7 +27,41 @@ import Section10 from '@/components/section10'
 export default {
 	name: 'Index',
 	components:{ Section1, Section2, Section3, Section4, Section5, Section6, Section7, Section8, Section9, Section10 },
-	data: () => ({}),
+	data: () => ({
+		menu: [
+			{
+				text: 'home',
+				link: '#home',
+				active: false
+			},
+			{
+				text: 'services',
+				link: '#services',
+				active: false
+			},
+			{
+				text: 'works',
+				link: '#works',
+				active: false
+			},
+			{
+				text: 'skills',
+				link: '#skills',
+				active: true
+			},
+			{
+				text: 'testimonials',
+				link: '#testimonials',
+				active: false
+			},
+			{
+				text: 'contacts',
+				link: '#contacts',
+				active: false
+			}
+		]
+	}),
+	computed: {},
 	methods: {},
 }
 </script>

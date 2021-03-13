@@ -9,8 +9,8 @@ export default {
 	name: 'Arrow',
 	data: () => ({}),
 	methods: {
-		nextSection(){
-			console.log('Перевожу на следующий слайд')
+		nextSection() {
+			this.$scrollTo('#services')
 		}
 	},
 }

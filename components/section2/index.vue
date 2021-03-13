@@ -5,7 +5,7 @@
 				Stanislav Petruk
 			</h1>
 			<div class="nav_buttons">
-				<div v-for="item in menu" :key="item.text" class="button" @click="menuClick(item.link)">
+				<div v-for="item in menu" :key="item.text" v-scroll-to="item.link" :class="['button',{active:item.active}]">
 					<span class="sub_title">{{ item.text }}</span>
 				</div>
 			</div>
@@ -19,38 +19,9 @@
 <script>
 export default {
 	name: 'Section2',
-	data: () => ({
-		menu: [
-			{
-				text: 'home',
-				link: '#1'
-			},
-			{
-				text: 'services',
-				link: '#2'
-			},
-			{
-				text: 'works',
-				link: '#3'
-			},
-			{
-				text: 'skills',
-				link: '#4'
-			},
-			{
-				text: 'testimonials',
-				link: '#5'
-			},
-			{
-				text: 'contacts',
-				link: '#6'
-			}
-		]
-	}),
+	props: {menu:Array},
+	data: () => ({}),
 	methods: {
-		menuClick(link){
-			console.log(link)
-		}
 	},
 }
 </script>
@@ -61,14 +32,6 @@ export default {
 	position: sticky
 	top: 0
 	z-index: 99
-	+tablet
-		background: green
-	+tabletxl
-		background: yellow
-	+desktop
-		background: blue
-	+desktopxl
-		background: red
 	.title
 		display: flex
 
@@ -84,12 +47,13 @@ export default {
 	flex-direction: row
 	@media screen and (max-width: 1500px)
 		display: none
-	.sub_title
-		margin: 0 20px
-		text-transform: uppercase
-		&:hover
+	.button
+		color: black
+		.sub_title
+			margin: 0 20px
+			text-transform: uppercase
+		&:hover,&.active
 			color: red
 			cursor: pointer
-
 
 </style>

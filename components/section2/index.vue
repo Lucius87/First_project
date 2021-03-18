@@ -19,7 +19,7 @@
 <script>
 export default {
 	name: 'Section2',
-	props: {menu:Array},
+	props: { menu:Array },
 	data: () => ({}),
 	methods: {
 	},

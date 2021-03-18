@@ -1,6 +1,6 @@
 <template>
 	<div class="scroll_top">
-		<h3>top</h3>
+		<i class="fa fa-angle-up" />
 	</div>
 </template>
 
@@ -14,11 +14,17 @@ export default {
 
 <style lang="sass" scoped>
 .scroll_top
+	color: white
 	position: fixed
-	right: 40px
-	bottom: 40px
-	width: 50px
-	height: 50px
-	background-color: purple
+	right: 30px
+	bottom: 30px
+	width: 35px
+	height: 35px
+	border: 1px solid darkgrey
+	border-radius: 3px
+	background-color: darkgrey
+	display: flex
+	align-items: center
+	justify-content: center
 
 </style>

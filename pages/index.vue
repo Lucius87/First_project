@@ -1,13 +1,25 @@
 <template>
 	<div>
-		<section1 id="home" />
-		<section2 :menu="menu"/>
-		<section3 id="services" />
-		<section4 id="works" />
-		<section5 id="skills" />
+		<intersect :threshold="0.5" @enter="vision(0)">
+			<section1 id="home" />
+		</intersect>
+		<section2 :menu="menu" />
+		<intersect :threshold="0.5" @enter="vision(1)">
+			<section3 id="services" />
+		</intersect>
+		<intersect :threshold="0.5" @enter="vision(2)">
+			<section4 id="works" />
+		</intersect>
+		<intersect :threshold="0.5" @enter="vision(3)">
+			<section5 id="skills" />
+		</intersect>
 		<section6 />
-		<section7 id="testimonials" />
-		<section8 id="contacts" />
+		<intersect :threshold="0.5" @enter="vision(4)">
+			<section7 id="testimonials" />
+		</intersect>
+		<intersect :threshold="0.5" @enter="vision(5)">
+			<section8 id="contacts" />
+		</intersect>
 		<section9 />
 		<section10 />
 	</div>
@@ -24,10 +36,14 @@ import Section7 from '@/components/section7'
 import Section8 from '@/components/section8'
 import Section9 from '@/components/section9'
 import Section10 from '@/components/section10'
+import Intersect from 'vue-intersect'
 export default {
 	name: 'Index',
-	components:{ Section1, Section2, Section3, Section4, Section5, Section6, Section7, Section8, Section9, Section10 },
+	components:{ Section1, Section2, Section3, Section4, Section5, Section6, Section7, Section8, Section9, Section10, Intersect },
 	data: () => ({
+		options: {
+			threshold: 0.5
+		},
 		menu: [
 			{
 				text: 'home',
@@ -47,7 +63,7 @@ export default {
 			{
 				text: 'skills',
 				link: '#skills',
-				active: true
+				active: false
 			},
 			{
 				text: 'testimonials',
@@ -62,7 +78,12 @@ export default {
 		]
 	}),
 	computed: {},
-	methods: {},
+	methods: {
+		vision(index){
+			this.menu.forEach(item => item.active = false)
+			this.menu[index].active = true
+		}
+	},
 }
 </script>
 

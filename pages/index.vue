@@ -1,23 +1,23 @@
 <template>
 	<div>
-		<intersect :threshold="0.5" @enter="vision(0)">
+		<intersect :threshold="[0.5, 0.5]" @enter="vision(0)">
 			<section1 id="home" />
 		</intersect>
 		<section2 :menu="menu" />
-		<intersect :threshold="0.5" @enter="vision(1)">
+		<intersect :threshold="[0.5, 0.5]" @enter="vision(1)">
 			<section3 id="services" />
 		</intersect>
-		<intersect :threshold="0.5" @enter="vision(2)">
+		<intersect :threshold="[0.5, 0.5]" @enter="vision(2)">
 			<section4 id="works" />
 		</intersect>
-		<intersect :threshold="0.5" @enter="vision(3)">
+		<intersect :threshold="[0.5, 0.5]" @enter="vision(3)">
 			<section5 id="skills" />
 		</intersect>
 		<section6 />
-		<intersect :threshold="0.5" @enter="vision(4)">
+		<intersect :threshold="[0.5, 0.5]" @enter="vision(4)">
 			<section7 id="testimonials" />
 		</intersect>
-		<intersect :threshold="0.5" @enter="vision(5)">
+		<intersect :threshold="[0.5, 0.5]" @enter="vision(5)">
 			<section8 id="contacts" />
 		</intersect>
 		<section9 />

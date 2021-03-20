@@ -26,5 +26,10 @@ export default {
 	display: flex
 	align-items: center
 	justify-content: center
+	&:hover
+		background-color: #eee
+		color: #e05454
+		border: #eee
+
 
 </style>

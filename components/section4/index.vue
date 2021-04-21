@@ -1,5 +1,5 @@
 <template>
-	<wrapper title="My work" description="No one lights a lamp in order to hide it behind the door: the purpose of light is to create more light, to open people’s eyes, to reveal the marvels around." color="#fff">
+	<wrapper title="My work" description="Так как я только начал открывать для себя это направление, здесь пока пустовато. Но надеюсь в скором времени это исправить. Быть может однажды здесь будет и ваш сайт." color="#fff">
 		<div class="gallery">
 			<gallery-box v-for="item in work" :key="item.image" :image="item.image" :text="item.text" />
 		</div>

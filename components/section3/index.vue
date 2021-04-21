@@ -18,23 +18,23 @@ export default {
 	data: () => ({
 		skills: [
 			{
-				text: 'Web Design',
-				desc: 'Good things come to those who wait, but only the things left by those who hustle',
+				text: 'HTML',
+				desc: 'Верстка и наполнение',
 				icon: '/images/magic_wand.png'
 			},
 			{
-				text: 'Web Programming',
-				desc: 'Good things come to those who wait, but only the things left by those who hustle',
+				text: 'CSS',
+				desc: 'Красивости',
 				icon: '/images/puzzle.png'
 			},
 			{
-				text: 'Branding',
-				desc: 'Good things come to those who wait, but only the things left by those who hustle',
+				text: 'Javascript',
+				desc: 'Возможности',
 				icon: '/images/badge.png'
 			},
 			{
-				text: 'Consultation',
-				desc: 'Good things come to those who wait, but only the things left by those who hustle',
+				text: 'Vue.js & Nuxt.js',
+				desc: 'Поддержка',
 				icon: '/images/question.png'
 			}
 		],

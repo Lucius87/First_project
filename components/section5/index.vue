@@ -18,19 +18,19 @@ export default {
 	data: () => ({
 		skills: [
 			{
-				text: 'Programming',
-				value: 65
-			},
-			{
-				text: 'Design',
-				value: 70
-			},
-			{
-				text: 'Helpdesk',
+				text: 'HTML',
 				value: 80
 			},
 			{
-				text: 'Network Engineering',
+				text: 'CSS',
+				value: 70
+			},
+			{
+				text: 'Javascript',
+				value: 70
+			},
+			{
+				text: 'Vue.ls & Nuxt.js',
 				value: 60
 			}
 		]
